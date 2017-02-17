@@ -8,6 +8,8 @@ namespace DocumentBuilder
 {
     public partial class _Default : Page
     {
+        protected string ErrorMessage;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Page.IsPostBack) return;
@@ -24,7 +26,6 @@ namespace DocumentBuilder
             TitleText.Attributes.Add("placeholder", "Commercial director");
 
             DocumentTypeHiddenField.Value = "";
-            ErrorHiddenField.Value = "";
         }
 
         protected void GenerateButton_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace DocumentBuilder
             }
             catch (Exception exception)
             {
-                ErrorHiddenField.Value = exception.Message;
+                ErrorMessage = exception.Message;
             }
         }
 
@@ -107,7 +108,7 @@ namespace DocumentBuilder
             }
             catch (Exception exception)
             {
-                ErrorHiddenField.Value = exception.Message;
+                ErrorMessage = exception.Message;
             }
         }
 

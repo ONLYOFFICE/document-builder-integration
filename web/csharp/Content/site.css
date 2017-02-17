@@ -250,3 +250,6 @@ footer {
 .hidden{
   display: none;
 }
+.error-message {
+    color: red;
+}

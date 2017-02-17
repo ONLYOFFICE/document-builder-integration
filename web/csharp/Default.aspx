@@ -8,7 +8,6 @@
     <title>ONLYOFFICE Document Builder</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" />
     <link href="~/Content/site.css" rel="stylesheet" />
-    <link href="~/Content/toastr.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
@@ -22,6 +21,7 @@
             <div class="help-block">
                 <span>Generate a document from the script below, edit it or upload your own script</span>
                 <p>Use the script in the textarea below as is to generate the document or you edit it in the textarea window. Or, in case you have a script of your own, use the button under the textarea to upload it.</p>
+                <div class="error-message"><%= ErrorMessage %></div>
                 <div class="clearFix">
                     <asp:TextBox ID="PredefinedScript" runat="server" TextMode="multiline"></asp:TextBox>
                     <div class="upload-panel clearFix">
@@ -79,12 +79,10 @@
                 Please, <a href="mailto:sales@onlyoffice.com">submit your request here</a>.
             </div>
         </div>
-        <asp:HiddenField ID="ErrorHiddenField" runat="server" />
 
         <footer>&copy; Ascensio Systems Inc 2016. All rights reserved.</footer>
     </form>
     <script src="Scripts/jquery-1.8.2.js"></script>
-    <script src="Scripts/toastr.js"></script>
     <script src="Scripts/script.js"></script>
     <script>
         function onfailure(error) {
