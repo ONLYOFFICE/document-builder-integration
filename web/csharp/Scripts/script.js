@@ -20,30 +20,20 @@ var DocumentBuilder = (function () {
             $("#MainContent_ErrorHiddenField").val("");
         }
 
-        $("#MainContent_FileUpload").on("change", function () {
+        $("#builderFileLink").on("click", function (e) {
+            e.preventDefault();
+            $("#builderFile").click();
+        });
 
-            var error = false;
+        $("#builderFile").on("change", function (e) {
+            var input = e.target;
 
-            $.each(this.files, function () {
-                if (!this.name) {
-                    toastr.error("Error File Name Is Empty", "An error has occurred.");
-                    error = true;
-                    return;
-                }
-
-                var parts = this.name.split(".");
-                var extension = parts[parts.length - 1];
-
-                if (!extension || extension.toLowerCase() != "docbuilder") {
-                    toastr.error("Error Invalid File Extension", "An error has occurred.");
-                    error = true;
-                }
-            });
-
-            if (error) return;
-
-            $("#MainContent_UploadButton").click();
-
+            var reader = new FileReader();
+            reader.onload = function () {
+                var text = reader.result;
+                $("#PredefinedScript").text(text);
+            };
+            reader.readAsText(input.files[0]);
         });
 
         $("#GenerateBtn").on("click", function () {

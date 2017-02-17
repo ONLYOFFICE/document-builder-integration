@@ -25,10 +25,9 @@
                 <div class="clearFix">
                     <asp:TextBox ID="PredefinedScript" runat="server" TextMode="multiline"></asp:TextBox>
                     <div class="upload-panel clearFix">
-                        <a class="file-upload">Upload your own script
-                        <asp:FileUpload ID="FileUpload" runat="server" />
-                            <asp:Button ID="UploadButton" runat="server" OnClick="UploadButton_Click" CssClass="hidden" />
-                        </a>
+                        <a id="builderFileLink" class="file-upload">Upload your own script</a>
+                        <input type="file" id="builderFile" />
+
                         <div class="generate-button-upload">
                             <a class="button-white" id="GenerateBtn">Generate document</a>
                             <asp:Button ID="GenerateButton" runat="server" OnClick="GenerateButton_Click" CssClass="hidden" />

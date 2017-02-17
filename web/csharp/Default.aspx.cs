@@ -30,38 +30,6 @@ namespace DocumentBuilder
             ErrorHiddenField.Value = "";
         }
 
-        protected void UploadButton_Click(object sender, EventArgs e)
-        {
-            if (!FileUpload.HasFile) return;
-
-            try
-            {
-                if (FileUpload.FileContent == null || FileUpload.FileContent.Length <= 0)
-                    throw new Exception("Error File InputStream Is Null");
-
-                if (string.IsNullOrEmpty(FileUpload.FileName))
-                    throw new Exception("Error File Name Is Empty");
-
-                var extension = Path.GetExtension(FileUpload.FileName);
-
-                if (string.IsNullOrEmpty(extension) ||
-                    !extension.Equals(".docbuilder", StringComparison.InvariantCultureIgnoreCase))
-                    throw new Exception("Error Invalid File Extension");
-
-                using (var stream = FileUpload.FileContent)
-                {
-                    using (var sr = new StreamReader(stream))
-                    {
-                        PredefinedScript.Text = sr.ReadToEnd();
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                ErrorHiddenField.Value = exception.Message;
-            }
-        }
-
         protected void GenerateButton_Click(object sender, EventArgs e)
         {
             try
