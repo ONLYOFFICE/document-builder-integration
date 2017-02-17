@@ -40,17 +40,17 @@
 
                     <ul class="try-editor-list clearFix">
                         <li>
-                            <a class="try-editor document reload-page" data-value="<%=((int)DocumentBuilder.Enums.DocumentType.Docx)%>">Create<br />
+                            <a class="try-editor document reload-page" data-value="docx">Create<br />
                                 Document
                             </a>
                         </li>
                         <li>
-                            <a class="try-editor spreadsheet reload-page" data-value="<%=((int)DocumentBuilder.Enums.DocumentType.Xlsx)%>">Create<br />
+                            <a class="try-editor spreadsheet reload-page" data-value="xlsx">Create<br />
                                 Spreadsheet
                             </a>
                         </li>
                         <li>
-                            <a class="try-editor presentation reload-page" data-value="<%=((int)DocumentBuilder.Enums.DocumentType.Pdf)%>">Create<br />
+                            <a class="try-editor presentation reload-page" data-value="pdf">Create<br />
                                 PDF
                             </a>
                         </li>

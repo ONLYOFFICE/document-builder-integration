@@ -13,11 +13,11 @@ var DocumentBuilder = (function () {
 
     function setBindings() {
 
-        var errorMsg = $("#MainContent_ErrorHiddenField").val();
+        var errorMsg = $("#ErrorHiddenField").val();
         
         if (errorMsg){
             toastr.error(errorMsg, "An error has occurred.");
-            $("#MainContent_ErrorHiddenField").val("");
+            $("#ErrorHiddenField").val("");
         }
 
         $("#builderFileLink").on("click", function (e) {
@@ -38,28 +38,28 @@ var DocumentBuilder = (function () {
 
         $("#GenerateBtn").on("click", function () {
 
-            if (!$("#MainContent_PredefinedScript").val().trim()) {
+            if (!$("#PredefinedScript").val().trim()) {
                 toastr.error("Empty Script", "An error has occurred.");
                 return;
             }
 
-            $("#MainContent_GenerateButton").click();
+            $("#GenerateButton").click();
         });
 
         $(".try-editor").on("click", function () {
 
             var data = {
                 Type: $(this).attr("data-value").trim(),
-                Name: $("#MainContent_NameText").val().trim(),
-                Company: $("#MainContent_CompanyText").val().trim(),
-                Title: $("#MainContent_TitleText").val().trim()
+                Name: $("#NameText").val().trim(),
+                Company: $("#CompanyText").val().trim(),
+                Title: $("#TitleText").val().trim()
             };
 
             if (!data.Type) {
                 toastr.error("Empty Document Type", "An error has occurred.");
                 return;
             } else {
-                $("#MainContent_DocumentTypeHiddenField").val(data.Type);
+                $("#DocumentTypeHiddenField").val(data.Type);
             }
             
             if (!data.Name) {
@@ -77,7 +77,7 @@ var DocumentBuilder = (function () {
                 return;
             }
 
-            $("#MainContent_CreateButton").click();
+            $("#CreateButton").click();
         });
     }
 

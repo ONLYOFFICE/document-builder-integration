@@ -61,8 +61,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Settings.cs" />
-    <Compile Include="Classes\UserInfo.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -70,16 +68,14 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Enums\DocumentType.cs" />
     <Compile Include="Helpers\BuildHelper.cs" />
-    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Templates\docx.docbuilder" />
-    <EmbeddedResource Include="Templates\pdf.docbuilder" />
-    <EmbeddedResource Include="Templates\sample.docbuilder" />
-    <EmbeddedResource Include="Templates\xlsx.docbuilder" />
+    <EmbeddedResource Include="App_Data\docx.docbuilder" />
+    <EmbeddedResource Include="App_Data\pdf.docbuilder" />
+    <EmbeddedResource Include="App_Data\sample.docbuilder" />
+    <EmbeddedResource Include="App_Data\xlsx.docbuilder" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="settings.config">

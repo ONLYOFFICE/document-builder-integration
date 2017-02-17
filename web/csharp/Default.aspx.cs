@@ -2,8 +2,6 @@
 using System.IO;
 using System.Reflection;
 using System.Web.UI;
-using DocumentBuilder.Classes;
-using DocumentBuilder.Enums;
 using DocumentBuilder.Helpers;
 
 namespace DocumentBuilder
@@ -14,8 +12,7 @@ namespace DocumentBuilder
         {
             if (Page.IsPostBack) return;
 
-            PredefinedScript.Text = FileHelper.ReadTextFromEmbeddedResource(Assembly.GetExecutingAssembly(),
-                                                                            "DocumentBuilder.Templates.sample.docbuilder");
+            PredefinedScript.Text = ReadTextFromEmbeddedResource(Assembly.GetExecutingAssembly(), "DocumentBuilder.App_Data.sample.docbuilder");
 
             NameText.Text = "";
             NameText.Attributes.Add("placeholder", "John Smith");
@@ -34,21 +31,30 @@ namespace DocumentBuilder
         {
             try
             {
-                if (string.IsNullOrEmpty(Settings.BuilderPath))
+                if (string.IsNullOrEmpty(BuildHelper.BuilderPath))
                     throw new Exception("Empty Builder Path");
 
-                var userInfo = new UserInfo
-                    {
-                        Script = PredefinedScript.Text.Trim()
-                    };
-
-                if (string.IsNullOrEmpty(userInfo.Script))
+                var builderScript = (PredefinedScript.Text ?? "").Trim();
+                if (string.IsNullOrEmpty(builderScript))
                     throw new Exception("Empty Script");
 
-                var filePath = BuildHelper.GenerateDocument(Settings.BuilderPath, userInfo);
+                var filePath = BuildHelper.GenerateDocument(BuildHelper.BuilderPath, builderScript);
 
-                Response.ContentType = "application/octet-stream";
-                Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
+                var fileName = Path.GetFileName(filePath) ?? "output..tmp.docx";
+                fileName = fileName.Substring(1 + fileName.IndexOf('.', 7));
+
+                var mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+                if (Path.GetExtension(fileName) == "xlsx")
+                {
+                    mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                }
+                else if (Path.GetExtension(fileName) == "pptx")
+                {
+                    mime = "application/vnd.openxmlformats-officedocument.presentationml.presentation";
+                }
+
+                Response.ContentType = mime;
+                Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
                 Response.TransmitFile(filePath);
                 Response.End();
             }
@@ -62,34 +68,40 @@ namespace DocumentBuilder
         {
             try
             {
-                if (string.IsNullOrEmpty(Settings.BuilderPath))
+                if (string.IsNullOrEmpty(BuildHelper.BuilderPath))
                     throw new Exception("Empty Builder Path");
 
-                int type;
+                var name = (NameText.Text ?? "").Trim();
+                if (string.IsNullOrEmpty(name))
+                    name = "John Smith";
 
-                Int32.TryParse(DocumentTypeHiddenField.Value, out type);
+                var company = (CompanyText.Text ?? "").Trim();
+                if (string.IsNullOrEmpty(company))
+                    company = "ONLYOFFICE";
 
-                var userInfo = new UserInfo
-                    {
-                        Name = NameText.Text.Trim(),
-                        Company = CompanyText.Text.Trim(),
-                        Title = TitleText.Text.Trim(),
-                        Type = (DocumentType)type
-                    };
+                var title = (TitleText.Text ?? "").Trim();
+                if (string.IsNullOrEmpty(title))
+                    title = "Commercial director";
 
-                if (string.IsNullOrEmpty(userInfo.Name))
-                    throw new Exception("Empty Name");
+                var format = DocumentTypeHiddenField.Value;
 
-                if (string.IsNullOrEmpty(userInfo.Company))
-                    throw new Exception("Empty Company");
+                var filePath = BuildHelper.CreateDocument(BuildHelper.BuilderPath, name, company, title, format);
 
-                if (string.IsNullOrEmpty(userInfo.Title))
-                    throw new Exception("Empty Title");
+                var fileName = Path.GetFileName(filePath) ?? "output..docx";
+                fileName = "Sample" + fileName.Substring(fileName.IndexOf('.', 7));
 
-                var filePath = BuildHelper.CreateDocument(Settings.BuilderPath, userInfo);
+                var mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+                if (Path.GetExtension(fileName) == ".xlsx")
+                {
+                    mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                }
+                else if (Path.GetExtension(fileName) == ".pdf")
+                {
+                    mime = "application/pdf";
+                }
 
-                Response.ContentType = "application/octet-stream";
-                Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
+                Response.ContentType = mime;
+                Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
                 Response.TransmitFile(filePath);
                 Response.End();
             }
@@ -97,6 +109,24 @@ namespace DocumentBuilder
             {
                 ErrorHiddenField.Value = exception.Message;
             }
+        }
+
+        private static string ReadTextFromEmbeddedResource(Assembly assembly, string resourceName)
+        {
+            var result = string.Empty;
+
+            using (var stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream != null)
+                {
+                    using (var sr = new StreamReader(stream))
+                    {
+                        result = sr.ReadToEnd();
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }
