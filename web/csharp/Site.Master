@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DocumentBuilder.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ONLYOFFICE Document Builder</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server">
+        <header>
+            <img src="Images/logo.png" alt="ONLYOFFICE" />
+        </header>
+        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        <footer>&copy; Ascensio Systems Inc 2016. All rights reserved.</footer>
+    </form>
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <script src="Scripts/toastr.js"></script>
+    <script src="Scripts/script.js"></script>
+    <script>
+        function onfailure(error) {
+            alert("Error: " + error.get_message() + "; " +
+                "Stack Trace: " + error.get_stackTrace() + "; " +
+                "Status Code: " + error.get_statusCode() + "; " +
+                "Exception Type: " + error.get_exceptionType() + "; " +
+                "Timed Out: " + error.get_timedOut());
+        }
+
+        $(function () {
+            DocumentBuilder.init();
+        });
+    </script>
+</body>
+</html>

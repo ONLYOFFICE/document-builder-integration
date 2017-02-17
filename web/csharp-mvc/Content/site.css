@@ -1,0 +1,257 @@
+﻿html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+form {
+  height: 100%;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+a, a:hover, a:visited {
+  color: #333;
+}
+header {
+  height: 44px;
+  background: #3D4A6B;
+  height: 53px;
+  margin: 0 auto;
+  min-width: 700px;
+  width: auto;
+}
+header a {
+  display: inline-block;
+  width: 248px;
+  height: 53px;
+  margin: 0 0 0 20px;
+}
+
+.main-panel {
+  margin: 80px auto 16px;
+  width: 700px;
+}
+.portal-name {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 2.5em;
+  color: #3d4a6b;
+}
+.portal-descr {
+  display: inline-block;
+  line-height: 20px;
+  margin-bottom: 20px;
+  width: 700px;
+}
+.try-editor-list {
+  list-style: none;
+  margin: 51px 0 16px;
+  padding: 0;
+  text-align: right;
+  display: inline-block;
+  float: right;
+}
+.try-editor-list li {
+  margin: 0 0 0 25px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+}
+.own-data-enter {
+  width: 220px;
+  margin: 0;
+  padding: 0;
+}
+.own-data-enter label {
+  display: block;
+  max-width: 220px;
+  padding: 10px 0 2px;
+}
+.own-data-enter input {
+  width: 250px;
+  padding: 3px 5px;
+  border: 1px solid #999;
+}
+.try-editor {
+  background-color: transparent;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 45px;
+  padding-top: 100px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.try-editor.document {
+  background-image: url(../images/file_docx.png)
+}
+.try-editor.spreadsheet {
+  background-image: url(../images/file_xlsx.png)
+}
+.try-editor.presentation {
+  background-image: url(../images/file_pptx.png)
+}
+.create-sample {
+  margin-left: 75px;
+}
+.button, .button:visited, .button:hover, .button:active {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor:pointer;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  touch-callout: none;
+  -o-touch-callout: none;
+  -moz-touch-callout: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 3px;
+  padding: 4px 12px;
+
+  color: #fff;
+
+  background: #3D96C6;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3D96C6;
+}
+
+.button.disable {
+  cursor: default;
+  background: #BADDEF;
+  border: 1px solid #BADDEF;
+}
+.button.gray {
+  background: #ebebeb;
+  border: 1px solid #D0D0D0;
+  color: #333;
+}
+
+.upload-panel {
+  border-bottom: 1px solid #D1D1D1;
+  text-align: left;
+  margin: 0;
+}
+.generate-button-upload {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-top: -175px;
+}
+.button-white {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 45px;
+  margin: 0 20px 16px;
+  overflow: hidden;
+  padding-top: 100px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  background: url(../images/file_download.png) no-repeat center 0 transparent;
+}
+.button-white.disabled,
+.button-white.disabled:hover {
+  background-color: #fff;
+  color: #aaa;
+  cursor: default;
+}
+.file-upload {
+  position: relative;
+  border: 1px solid #bfbfbf;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+  color: #7C7C7C;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 4px 15px;
+  margin: 0;
+  background: #dedede;
+  background-image: -webkit-linear-gradient(top, #f3f3f3, 0,  #dedede, 100%);
+  background-image:  -moz-linear-gradient(top, #f3f3f3 0,  #dedede 100%);
+  background-image: linear-gradient(to bottom, #f3f3f3 0,  #dedede 100%);
+  background-repeat: repeat-x;
+}
+.file-upload:hover, .file-upload:active {
+  color: #7C7C7C;
+  background-image: -webkit-linear-gradient(top, #f3f3f3, 0,  #ebebeb, 100%);
+  background-image:  -moz-linear-gradient(top, #f3f3f3 0,  #ebebeb 100%);
+  background-image: linear-gradient(to bottom, #f3f3f3 0,  #ebebeb 100%);
+}
+textarea {
+  width: 540px;
+  height: 180px;
+  overflow-y: scroll;
+  border: 1px solid #bfbfbf;
+  padding: 5px;
+  font-size: 13px;
+  font-family: monospace;
+  resize: none;
+}
+.file-upload input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 171px;
+  height: 28px;
+}
+.upload-panel,
+.create-panel {
+  padding: 10px 0 20px;
+}
+footer {
+  text-align: right;
+  width: auto;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+.help-block {
+  margin: 0 0 40px;
+}
+.help-block span {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+  display: block;
+  margin: 20px 0 10px;
+  color: #3d4a6b;
+}
+.clearFix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.hidden{
+  display: none;
+}

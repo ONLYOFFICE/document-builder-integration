@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ONLYOFFICE Document Builder</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext"/>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <header>
+        <img src="~/images/logo.png" alt="ONLYOFFICE" />
+    </header>
+    @RenderBody()
+    <footer>&copy; Ascensio Systems Inc 2016. All rights reserved.</footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/scripts")
+    <script>
+        $(function () {
+
+            ActionUrl.Upload = '@Url.Action("Upload", "Home")';
+            ActionUrl.Generate = '@Url.Action("Generate", "Home")';
+            ActionUrl.Create = '@Url.Action("Create", "Home")';
+            ActionUrl.Download = '@Url.Action("Download", "Home")';
+
+            DocumentBuilder.init();
+
+        });
+    </script>
+</body>
+</html>
