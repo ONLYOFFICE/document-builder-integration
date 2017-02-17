@@ -1,5 +1,4 @@
-﻿
-namespace DocumentBuilder.Enums
+﻿namespace DocumentBuilder.Enums
 {
     public enum DocumentType
     {

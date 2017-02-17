@@ -58,7 +58,6 @@ namespace DocumentBuilder
             }
             catch (Exception exception)
             {
-                LogHelper.Log.Error(exception);
                 ErrorHiddenField.Value = exception.Message;
             }
         }
@@ -87,7 +86,6 @@ namespace DocumentBuilder
             }
             catch (Exception exception)
             {
-                LogHelper.Log.Error(exception);
                 ErrorHiddenField.Value = exception.Message;
             }
         }
@@ -108,7 +106,7 @@ namespace DocumentBuilder
                         Name = NameText.Text.Trim(),
                         Company = CompanyText.Text.Trim(),
                         Title = TitleText.Text.Trim(),
-                        Type = (DocumentType) type
+                        Type = (DocumentType)type
                     };
 
                 if (string.IsNullOrEmpty(userInfo.Name))
@@ -129,7 +127,6 @@ namespace DocumentBuilder
             }
             catch (Exception exception)
             {
-                LogHelper.Log.Error(exception);
                 ErrorHiddenField.Value = exception.Message;
             }
         }

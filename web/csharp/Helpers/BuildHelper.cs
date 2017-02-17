@@ -8,7 +8,6 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using DocumentBuilder.Classes;
 
-
 namespace DocumentBuilder.Helpers
 {
     public class BuildHelper
@@ -20,7 +19,8 @@ namespace DocumentBuilder.Helpers
 
             var format = string.Empty;
 
-            foreach (Match match in Regex.Matches(userInfo.Script, formatPattern)){
+            foreach (Match match in Regex.Matches(userInfo.Script, formatPattern))
+            {
                 format = match.Value.Split('"')[1];
                 break;
             }
@@ -50,11 +50,11 @@ namespace DocumentBuilder.Helpers
 
             var customerData = new Dictionary<string, string>
                 {
-                    {"${Name}", userInfo.Name},
-                    {"${Company}", userInfo.Company},
-                    {"${Title}", userInfo.Title},
-                    {"${DateTime}", DateTime.Now.ToString(CultureInfo.InvariantCulture)},
-                    {"${OutputFilePath}", outputFilePath}
+                    { "${Name}", userInfo.Name },
+                    { "${Company}", userInfo.Company },
+                    { "${Title}", userInfo.Title },
+                    { "${DateTime}", DateTime.Now.ToString(CultureInfo.InvariantCulture) },
+                    { "${OutputFilePath}", outputFilePath }
                 };
 
             var inputText = customerData.Aggregate(templateText,
@@ -67,26 +67,24 @@ namespace DocumentBuilder.Helpers
 
             return outputFilePath;
         }
-        
+
         public static byte[] BuildFile(string builderFilePath, string inputFilePath, string outputFilePath)
         {
-            byte[] result = null;
-
             var startInfo = new ProcessStartInfo
-            {
-                WindowStyle = ProcessWindowStyle.Hidden,
-                WorkingDirectory = Path.GetDirectoryName(builderFilePath) ?? string.Empty,
-                FileName = builderFilePath,
-                Arguments = inputFilePath,
-                UseShellExecute = false
-            };
+                {
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    WorkingDirectory = Path.GetDirectoryName(builderFilePath) ?? string.Empty,
+                    FileName = builderFilePath,
+                    Arguments = inputFilePath,
+                    UseShellExecute = false
+                };
 
             using (var process = Process.Start(startInfo))
             {
                 process.WaitForExit();
             }
 
-            result = FileHelper.ReadBytesFromFile(outputFilePath);
+            var result = FileHelper.ReadBytesFromFile(outputFilePath);
 
             if (result == null)
                 throw new Exception("An error has occurred. Empty Output File");
