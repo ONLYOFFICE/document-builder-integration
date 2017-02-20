@@ -9,7 +9,7 @@
 
   <Target Name="Build">
     <ItemGroup>
-      <ZipFilesCSharp Include="$(DirCSharp)**" Exclude="$(DirCSharp)obj\**;" />
+      <ZipFilesCSharp Include="$(DirCSharp)**" Exclude="$(DirCSharp)obj\**;$(DirCSharp)DocumentBuilder.csproj.user" />
     </ItemGroup>
     <Zip Files="@(ZipFilesCSharp)" WorkingDirectory="$(DirCSharp)" ZipFileName="$(To)docbuilder-net-asp-example.zip" />
   </Target>

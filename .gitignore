@@ -3,3 +3,5 @@
 /web/csharp/bin
 /build/*.log
 /build/deploy
+/web/csharp-mvc/obj
+/web/csharp-mvc/bin
