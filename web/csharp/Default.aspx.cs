@@ -24,8 +24,6 @@ namespace DocumentBuilder
 
             TitleText.Text = "";
             TitleText.Attributes.Add("placeholder", "Commercial director");
-
-            DocumentTypeHiddenField.Value = "";
         }
 
         protected void GenerateButton_Click(object sender, EventArgs e)
@@ -65,7 +63,22 @@ namespace DocumentBuilder
             }
         }
 
-        protected void CreateButton_Click(object sender, EventArgs e)
+        protected void CreateDocx_click(object sender, EventArgs e)
+        {
+            Create("docx");
+        }
+
+        protected void CreateXlsx_click(object sender, EventArgs e)
+        {
+            Create("xlsx");
+        }
+
+        protected void CreatePdf_click(object sender, EventArgs e)
+        {
+            Create("pdf");
+        }
+
+        private void Create(string format)
         {
             try
             {
@@ -83,8 +96,6 @@ namespace DocumentBuilder
                 var title = (TitleText.Text ?? "").Trim();
                 if (string.IsNullOrEmpty(title))
                     title = "Commercial director";
-
-                var format = DocumentTypeHiddenField.Value;
 
                 var filePath = BuildHelper.CreateDocument(BuildHelper.BuilderPath, name, company, title, format);
 

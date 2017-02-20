@@ -29,8 +29,7 @@
                         <input type="file" id="builderFile" />
 
                         <div class="generate-button-upload">
-                            <a class="button-white" id="GenerateBtn">Generate document</a>
-                            <asp:Button ID="GenerateButton" runat="server" OnClick="GenerateButton_Click" CssClass="hidden" />
+                            <asp:Button ID="GenerateButton" runat="server" OnClick="GenerateButton_Click" Text="Generate document" />
                         </div>
                         <p>Visit <a target="_blank" href="http://helpcenter.onlyoffice.com/developers/document-builder/index.aspx">ONLYOFFICE Document Builder documentation</a> for more script examples.</p>
                     </div>
@@ -40,19 +39,13 @@
 
                     <ul class="try-editor-list clearFix">
                         <li>
-                            <a class="try-editor document reload-page" data-value="docx">Create<br />
-                                Document
-                            </a>
+                            <asp:Button ID="CreateDocx" runat="server" OnClick="CreateDocx_click" CssClass="try-editor document" Text="Create Document" />
                         </li>
                         <li>
-                            <a class="try-editor spreadsheet reload-page" data-value="xlsx">Create<br />
-                                Spreadsheet
-                            </a>
+                            <asp:Button ID="Button1" runat="server" OnClick="CreateXlsx_click" CssClass="try-editor spreadsheet" Text="Create Spreadsheet" />
                         </li>
                         <li>
-                            <a class="try-editor presentation reload-page" data-value="pdf">Create<br />
-                                PDF
-                            </a>
+                            <asp:Button ID="Button2" runat="server" OnClick="CreatePdf_click" CssClass="try-editor presentation" Text="Create PDF" />
                         </li>
                     </ul>
 
@@ -63,8 +56,6 @@
                             <asp:TextBox ID="CompanyText" runat="server" CssClass="input"></asp:TextBox>
                             <label>Position/Title: </label>
                             <asp:TextBox ID="TitleText" runat="server" CssClass="input"></asp:TextBox>
-                            <asp:HiddenField ID="DocumentTypeHiddenField" runat="server" />
-                            <asp:Button ID="CreateButton" runat="server" OnClick="CreateButton_Click" CssClass="hidden" />
                         </div>
                     </div>
                 </div>

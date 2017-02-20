@@ -84,17 +84,20 @@ header a {
   border: 1px solid #999;
 }
 .try-editor {
-  background-color: transparent;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  height: 45px;
-  padding-top: 100px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
+    background-color: transparent;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    border: none;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 135px;
+    padding-top: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 94px;
+    white-space: inherit;
 }
 .try-editor.document {
   background-image: url(../images/file_docx.png)
@@ -162,25 +165,20 @@ header a {
   float: right;
   margin-top: -175px;
 }
-.button-white {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  height: 45px;
-  margin: 0 20px 16px;
-  overflow: hidden;
-  padding-top: 100px;
-  position: relative;
-  text-align: center;
-  width: 100px;
-  background: url(../images/file_download.png) no-repeat center 0 transparent;
-}
-.button-white.disabled,
-.button-white.disabled:hover {
-  background-color: #fff;
-  color: #aaa;
-  cursor: default;
+#GenerateButton {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 20px 16px;
+    overflow: hidden;
+    padding-top: 100px;
+    position: relative;
+    text-align: center;
+    width: 90px;
+    background: url(../images/file_download.png) no-repeat center 0 transparent;
+    white-space: inherit;
 }
 .file-upload {
   position: relative;
