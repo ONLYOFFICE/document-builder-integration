@@ -125,13 +125,13 @@ header a {
     white-space: inherit;
 }
 .try-editor.document {
-  background-image: url(../images/file_docx.png)
+  background-image: url(images/file_docx.png)
 }
 .try-editor.spreadsheet {
-  background-image: url(../images/file_xlsx.png)
+  background-image: url(images/file_xlsx.png)
 }
 .try-editor.presentation {
-  background-image: url(../images/file_pptx.png)
+  background-image: url(images/file_pptx.png)
 }
 .create-sample {
   margin-left: 75px;
@@ -202,7 +202,7 @@ header a {
     position: relative;
     text-align: center;
     width: 90px;
-    background: url(../images/file_download.png) no-repeat center 0 transparent;
+    background: url(images/file_download.png) no-repeat center 0 transparent;
     white-space: inherit;
 }
 .file-upload {

@@ -13,7 +13,7 @@
 <body>
     <form id="Form1" runat="server">
         <header>
-            <img src="Images/logo.png" alt="ONLYOFFICE" />
+            <img src="Content/Images/logo.png" alt="ONLYOFFICE" />
         </header>
         <div class="main-panel">
             <span class="portal-name">ONLYOFFICE Document Builder – Welcome!</span>

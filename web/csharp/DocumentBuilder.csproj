@@ -43,15 +43,14 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\file_docx.png" />
+    <Content Include="Content\Images\file_download.png" />
+    <Content Include="Content\Images\file_pptx.png" />
+    <Content Include="Content\Images\file_xlsx.png" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="Images\file_docx.png" />
-    <Content Include="Images\file_download.png" />
-    <Content Include="Images\file_pptx.png" />
-    <Content Include="Images\file_upload.png" />
-    <Content Include="Images\file_xlsx.png" />
-    <Content Include="Images\logo.png" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
