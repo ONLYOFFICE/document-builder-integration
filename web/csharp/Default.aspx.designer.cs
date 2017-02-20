@@ -58,22 +58,22 @@ namespace DocumentBuilder {
         protected global::System.Web.UI.WebControls.Button CreateDocx;
         
         /// <summary>
-        /// Button1 control.
+        /// CreateXlsx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button CreateXlsx;
         
         /// <summary>
-        /// Button2 control.
+        /// CreatePdf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button CreatePdf;
         
         /// <summary>
         /// NameText control.

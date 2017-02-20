@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>ONLYOFFICE Document Builder</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" />
-    <link href="~/Content/site.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <form id="Form1" runat="server">
         <header>
-            <img src="Content/Images/logo.png" alt="ONLYOFFICE" />
+            <a href="/"><img src="Content/Images/logo.png" alt="ONLYOFFICE" /></a>
         </header>
         <div class="main-panel">
             <span class="portal-name">ONLYOFFICE Document Builder – Welcome!</span>
@@ -31,7 +31,7 @@
                         <div class="generate-button-upload">
                             <asp:Button ID="GenerateButton" runat="server" OnClick="GenerateButton_Click" Text="Generate document" />
                         </div>
-                        <p>Visit <a target="_blank" href="http://helpcenter.onlyoffice.com/developers/document-builder/index.aspx">ONLYOFFICE Document Builder documentation</a> for more script examples.</p>
+                        <p>Visit <a target="_blank" href="https://api.onlyoffice.com/docbuilder/basic">ONLYOFFICE Document Builder documentation</a> for more script examples.</p>
                     </div>
                     <div class="create-panel clearFix">
                         <span>Or create a new file from a sample script with your own data</span>
@@ -42,10 +42,10 @@
                             <asp:Button ID="CreateDocx" runat="server" OnClick="CreateDocx_click" CssClass="try-editor document" Text="Create Document" />
                         </li>
                         <li>
-                            <asp:Button ID="Button1" runat="server" OnClick="CreateXlsx_click" CssClass="try-editor spreadsheet" Text="Create Spreadsheet" />
+                            <asp:Button ID="CreateXlsx" runat="server" OnClick="CreateXlsx_click" CssClass="try-editor spreadsheet" Text="Create Spreadsheet" />
                         </li>
                         <li>
-                            <asp:Button ID="Button2" runat="server" OnClick="CreatePdf_click" CssClass="try-editor presentation" Text="Create PDF" />
+                            <asp:Button ID="CreatePdf" runat="server" OnClick="CreatePdf_click" CssClass="try-editor presentation" Text="Create PDF" />
                         </li>
                     </ul>
 
@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <footer>&copy; Ascensio Systems Inc 2016. All rights reserved.</footer>
+        <footer>&copy; Ascensio Systems Inc 2017. All rights reserved.</footer>
     </form>
     <script src="Scripts/script.js"></script>
 </body>
