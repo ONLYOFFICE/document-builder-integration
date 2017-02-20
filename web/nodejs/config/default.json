@@ -1,0 +1,12 @@
+{
+  "server": {
+    "port": 3000,
+    "builderPath": "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe",
+    "static":[
+      {
+        "name": "/public",
+        "path": "public"
+      }
+    ]
+  }
+}

@@ -5,3 +5,4 @@
 /build/deploy
 /web/csharp-mvc/obj
 /web/csharp-mvc/bin
+/web/nodejs/node_modules

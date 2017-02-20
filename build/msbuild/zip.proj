@@ -4,7 +4,8 @@
   <PropertyGroup>
     <To Condition=" '$(To)' == '' ">..\deploy\</To>
     <RootDir Condition="$(RootDir)==''">..\..\</RootDir>
-	<DirCSharp>$(RootDir)web\csharp\</DirCSharp>
+    <DirCSharp>$(RootDir)web\csharp\</DirCSharp>
+    <DirNodeJS>$(RootDir)web\nodejs\</DirNodeJS>
   </PropertyGroup>
 
   <Target Name="Build">
@@ -12,6 +13,11 @@
       <ZipFilesCSharp Include="$(DirCSharp)**" Exclude="$(DirCSharp)obj\**;$(DirCSharp)DocumentBuilder.csproj.user" />
     </ItemGroup>
     <Zip Files="@(ZipFilesCSharp)" WorkingDirectory="$(DirCSharp)" ZipFileName="$(To)docbuilder-net-asp-example.zip" />
+
+    <ItemGroup>
+      <ZipFilesNodeJS Include="$(DirNodeJS)**" Exclude="$(DirNodeJS)node_modules\**" />
+    </ItemGroup>
+    <Zip Files="@(ZipFilesNodeJS)" WorkingDirectory="$(DirNodeJS)" ZipFileName="$(To)docbuilder-node-js-example.zip" />
   </Target>
 
 </Project>
