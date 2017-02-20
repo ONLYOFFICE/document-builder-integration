@@ -23,29 +23,18 @@
  *
 */
 
-var DocumentBuilder = (function () {
+builderFileLink.onclick = function (e) {
+    e.preventDefault();
+    builderFile.click();
+};
 
-    function init() {
+builderFile.onchange = function (e) {
+    var input = e.target;
 
-        $("#builderFileLink").on("click", function (e) {
-            e.preventDefault();
-            $("#builderFile").click();
-        });
-
-        $("#builderFile").on("change", function (e) {
-            var input = e.target;
-
-            var reader = new FileReader();
-            reader.onload = function () {
-                var text = reader.result;
-                $("#PredefinedScript").text(text);
-            };
-            reader.readAsText(input.files[0]);
-        });
-    }
-
-    return {
-        init: init
+    var reader = new FileReader();
+    reader.onload = function () {
+        var text = reader.result;
+        document.getElementById("PredefinedScript").value = text;
     };
-
-})();
+    reader.readAsText(input.files[0]);
+};

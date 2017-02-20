@@ -52,7 +52,6 @@
     <Content Include="Images\file_upload.png" />
     <Content Include="Images\file_xlsx.png" />
     <Content Include="Images\logo.png" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

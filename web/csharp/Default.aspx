@@ -73,20 +73,6 @@
 
         <footer>&copy; Ascensio Systems Inc 2016. All rights reserved.</footer>
     </form>
-    <script src="Scripts/jquery-1.8.2.js"></script>
     <script src="Scripts/script.js"></script>
-    <script>
-        function onfailure(error) {
-            alert("Error: " + error.get_message() + "; " +
-                "Stack Trace: " + error.get_stackTrace() + "; " +
-                "Status Code: " + error.get_statusCode() + "; " +
-                "Exception Type: " + error.get_exceptionType() + "; " +
-                "Timed Out: " + error.get_timedOut());
-        }
-
-        $(function () {
-            DocumentBuilder.init();
-        });
-    </script>
 </body>
 </html>
