@@ -39,7 +39,7 @@ docbuilderHelper.generateDocument = function (builderScript) {
     builderScript = CutBuilderScript(builderScript);
 
     var fileName = GetFileName(builderScript);
-    var format = path.extname(fileName);
+    var format = path.extname(fileName).replace(".", "");
 
     var hash = (Math.random() + "").replace(".", "_");
     var inputFilePath = path.join(os.tmpdir(), "input." + hash + ".docbuilder");

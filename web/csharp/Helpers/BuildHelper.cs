@@ -49,7 +49,7 @@ namespace DocumentBuilder.Helpers
             builderScript = CutBuilderScript(builderScript);
 
             var fileName = GetFileName(builderScript);
-            var format = Path.GetExtension(fileName);
+            var format = (Path.GetExtension(fileName) ?? "").TrimStart('.');
 
             var hash = Guid.NewGuid().ToString();
             var inputFilePath = Path.Combine(Path.GetTempPath(), string.Format("input.{0}.docbuilder", hash));
