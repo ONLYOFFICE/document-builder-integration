@@ -78,7 +78,7 @@ namespace DocumentBuilder
                 }
 
                 Response.ContentType = mime;
-                Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
+                Response.AppendHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\"");
                 Response.TransmitFile(filePath);
                 Response.End();
             }
@@ -138,7 +138,7 @@ namespace DocumentBuilder
                 }
 
                 Response.ContentType = mime;
-                Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
+                Response.AppendHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\"");
                 Response.TransmitFile(filePath);
                 Response.End();
             }

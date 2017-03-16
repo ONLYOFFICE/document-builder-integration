@@ -89,7 +89,7 @@ app.post("/generate", function (req, res) {
         fileName = fileName.substring(1 + fileName.indexOf(".", 7));
 
         res.setHeader("Content-Length", fileSystem.statSync(outputFilePath).size);
-        res.setHeader("Content-disposition", "attachment; filename=" + fileName);
+        res.setHeader("Content-disposition", "attachment; filename=\"" + fileName + "\"");
         res.setHeader("Content-type", mime.lookup(outputFilePath));
 
         var filestream = fileSystem.createReadStream(outputFilePath);
