@@ -145,7 +145,7 @@ docbuilderHelper.CreateDocument = function (name, company, title, format) {
 
 var BuildFile = function (inputFilePath, outputFilePath) {
 
-    child_process.execFileSync(builderPath, [inputFilePath]);
+    child_process.execFileSync(builderPath, [inputFilePath], { cwd: path.dirname(builderPath) });
 
     try {
         fileSystem.accessSync(outputFilePath, fileSystem.F_OK);
