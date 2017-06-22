@@ -1,8 +1,7 @@
-/web/csharp/DocumentBuilder.csproj.user
-/web/csharp/obj
-/web/csharp/bin
-/build/*.log
+**/obj/
+**/bin/
+*.suo
+*.user
 /build/deploy
-/web/csharp-mvc/obj
-/web/csharp-mvc/bin
+/build/*.log
 /web/nodejs/node_modules
