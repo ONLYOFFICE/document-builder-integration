@@ -2,6 +2,7 @@
 **/bin/
 *.suo
 *.user
+/web/logs
 /build/deploy
 /build/*.log
 /web/nodejs/node_modules

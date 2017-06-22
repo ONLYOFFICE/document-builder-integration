@@ -5,19 +5,31 @@
     <To Condition=" '$(To)' == '' ">..\deploy\</To>
     <RootDir Condition="$(RootDir)==''">..\..\</RootDir>
     <DirCSharp>$(RootDir)web\csharp\</DirCSharp>
+    <DirMvc>$(RootDir)web\csharp-mvc\</DirMvc>
     <DirNodeJS>$(RootDir)web\nodejs\</DirNodeJS>
+    <DirRuby>$(RootDir)web\ruby\</DirRuby>
   </PropertyGroup>
 
   <Target Name="Build">
     <ItemGroup>
       <ZipFilesCSharp Include="$(DirCSharp)**" Exclude="$(DirCSharp)obj\**;$(DirCSharp)DocumentBuilder.csproj.user" />
     </ItemGroup>
-    <Zip Files="@(ZipFilesCSharp)" WorkingDirectory="$(DirCSharp)" ZipFileName="$(To)docbuilder-net-asp-example.zip" />
+    <Zip Files="@(ZipFilesCSharp)" WorkingDirectory="$(DirCSharp)" ZipFileName="$(To).Net (C#) Example.zip" />
+
+    <ItemGroup>
+      <ZipFilesMVC Include="$(DirMvc)**" Exclude="$(DirMvc)obj\**;$(DirMvc)packages\**;" />
+    </ItemGroup>
+    <Zip Files="@(ZipFilesMVC)" WorkingDirectory="$(DirMvc)" ZipFileName="$(To).Net (C# MVC) Example.zip" />
 
     <ItemGroup>
       <ZipFilesNodeJS Include="$(DirNodeJS)**" Exclude="$(DirNodeJS)node_modules\**" />
     </ItemGroup>
-    <Zip Files="@(ZipFilesNodeJS)" WorkingDirectory="$(DirNodeJS)" ZipFileName="$(To)docbuilder-node-js-example.zip" />
+    <Zip Files="@(ZipFilesNodeJS)" WorkingDirectory="$(DirNodeJS)" ZipFileName="$(To)Node.js Example.zip" />
+
+    <ItemGroup>
+      <ZipFilesRuby Include="$(DirRuby)**" />
+    </ItemGroup>
+    <Zip Files="@(ZipFilesRuby)" WorkingDirectory="$(DirRuby)" ZipFileName="$(To)Ruby Example.zip" />
   </Target>
 
 </Project>
