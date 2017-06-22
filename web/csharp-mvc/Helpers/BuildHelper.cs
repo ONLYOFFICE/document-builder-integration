@@ -44,7 +44,7 @@ namespace DocumentBuilder.Helpers
             var inputFilePath = Path.Combine(Path.GetTempPath(), "input.docbuilder");
             var outputFilePath = Path.Combine(Path.GetTempPath(), string.Format("output.{0}", userInfo.Type.ToString().ToLowerInvariant()));
 
-            var resourceName = string.Format("DocumentBuilder.Templates.{0}.docbuilder", userInfo.Type.ToString().ToLowerInvariant());
+            var resourceName = string.Format("DocumentBuilderMVC.Templates.{0}.docbuilder", userInfo.Type.ToString().ToLowerInvariant());
 
             var templateText = FileHelper.ReadTextFromEmbeddedResource(Assembly.GetExecutingAssembly(), resourceName);
 
