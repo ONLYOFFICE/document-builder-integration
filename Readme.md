@@ -1,5 +1,9 @@
 ## Document Builder integration example
 
+These examples show the way to integrate ONLYOFFICE Document Builder into your own website or application using one of the programming languages. The package contains examples written in .Net (C# MVC), .Net (C#), Node.js, PHP and Ruby.
+
+More information on how to use these examples can be found here: https://api.onlyoffice.com/docbuilder/integratingdocumentbuilder
+
 ## User Feedback and Support
 
 If you have any problems with or questions about [ONLYOFFICE Document Builder][2], please visit our official forum to find answers to your questions: [dev.onlyoffice.org][1] or you can ask and answer ONLYOFFICE development questions on [Stack Overflow][3].
