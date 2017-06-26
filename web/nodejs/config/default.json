@@ -1,0 +1,12 @@
+{
+  "server": {
+    "port": 3000,
+    "builderPath": "/usr/bin/documentbuilder",
+    "static":[
+      {
+        "name": "/public",
+        "path": "public"
+      }
+    ]
+  }
+}

@@ -13,6 +13,24 @@ namespace DocumentBuilder {
     public partial class _Default {
         
         /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        
+        /// <summary>
+        /// Form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
+        
+        /// <summary>
         /// PredefinedScript control.
         /// </summary>
         /// <remarks>
@@ -22,24 +40,6 @@ namespace DocumentBuilder {
         protected global::System.Web.UI.WebControls.TextBox PredefinedScript;
         
         /// <summary>
-        /// FileUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
-        
-        /// <summary>
-        /// UploadButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UploadButton;
-        
-        /// <summary>
         /// GenerateButton control.
         /// </summary>
         /// <remarks>
@@ -47,6 +47,33 @@ namespace DocumentBuilder {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button GenerateButton;
+        
+        /// <summary>
+        /// CreateDocx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreateDocx;
+        
+        /// <summary>
+        /// CreateXlsx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreateXlsx;
+        
+        /// <summary>
+        /// CreatePdf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreatePdf;
         
         /// <summary>
         /// NameText control.
@@ -74,32 +101,5 @@ namespace DocumentBuilder {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TitleText;
-        
-        /// <summary>
-        /// DocumentTypeHiddenField control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField DocumentTypeHiddenField;
-        
-        /// <summary>
-        /// CreateButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateButton;
-        
-        /// <summary>
-        /// ErrorHiddenField control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField ErrorHiddenField;
     }
 }

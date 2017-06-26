@@ -11,7 +11,7 @@ namespace DocumentBuilder.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Sample = FileHelper.ReadTextFromEmbeddedResource(Assembly.GetExecutingAssembly(), "DocumentBuilder.Templates.sample.docbuilder");
+            ViewBag.Sample = FileHelper.ReadTextFromEmbeddedResource(Assembly.GetExecutingAssembly(), "DocumentBuilderMVC.Templates.sample.docbuilder");
 
             return View();
         }
