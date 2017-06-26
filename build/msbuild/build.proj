@@ -6,7 +6,7 @@
     <To Condition=" '$(To)' == '' ">..\deploy\</To>
 
     <RootDir Condition="$(RootDir)==''">..\..\</RootDir>
-	<DirCSharp>$(RootDir)web\csharp\</DirCSharp>
+    <DirCSharp>$(RootDir)web\csharp\</DirCSharp>
   </PropertyGroup>
 
   <ItemGroup>

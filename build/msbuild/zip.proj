@@ -7,6 +7,7 @@
     <DirCSharp>$(RootDir)web\csharp\</DirCSharp>
     <DirMvc>$(RootDir)web\csharp-mvc\</DirMvc>
     <DirNodeJS>$(RootDir)web\nodejs\</DirNodeJS>
+    <DirPHP>$(RootDir)web\php\</DirPHP>
     <DirRuby>$(RootDir)web\ruby\</DirRuby>
   </PropertyGroup>
 
@@ -25,6 +26,11 @@
       <ZipFilesNodeJS Include="$(DirNodeJS)**" Exclude="$(DirNodeJS)node_modules\**" />
     </ItemGroup>
     <Zip Files="@(ZipFilesNodeJS)" WorkingDirectory="$(DirNodeJS)" ZipFileName="$(To)Node.js Example.zip" />
+
+    <ItemGroup>
+      <ZipFilesPHP Include="$(DirPHP)**" />
+    </ItemGroup>
+    <Zip Files="@(ZipFilesPHP)" WorkingDirectory="$(DirPHP)" ZipFileName="$(To)PHP Example.zip" />
 
     <ItemGroup>
       <ZipFilesRuby Include="$(DirRuby)**" />
