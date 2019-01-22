@@ -1,7 +1,7 @@
 ﻿<?php
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System SIA 2019
  *
  * The MIT License (MIT)
  *
@@ -131,7 +131,7 @@
             Please, <a href="mailto:sales@onlyoffice.com">submit your request here</a>.
         </div>
     </div>
-    <footer>&copy; Ascensio Systems Inc <?php echo date("Y"); ?>. All rights reserved.</footer>
+    <footer>&copy; Ascensio Systems SIA <?php echo date("Y"); ?>. All rights reserved.</footer>
 
     <script type="text/javascript" src="js/jscript.js"></script>
 </body>
