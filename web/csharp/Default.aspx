@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <footer>&copy; Ascensio System SIA 2019. All rights reserved.</footer>
+        <footer>&copy; Ascensio System SIA 2020. All rights reserved.</footer>
     </form>
     <script src="Scripts/script.js"></script>
 </body>
