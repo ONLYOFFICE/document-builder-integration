@@ -1,6 +1,5 @@
 <?php
 
-$GLOBALS['builder_path'] = "D:\\DocumentBuilder\\docbuilder.exe";
-
+$GLOBALS['builder_path'] = "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe";
 
 ?>

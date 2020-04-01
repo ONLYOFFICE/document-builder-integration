@@ -5,8 +5,12 @@
   "scripts": {
     "start": "node ./bin/www"
   },
+  "description": "DocumentBuilderNodeJS",
   "author": {
     "name": "ONLYOFFICE"
+  },
+  "bugs": {
+    "url": "https://github.com/ONLYOFFICE/document-builder-integration/issues"
   },
   "dependencies": {
     "body-parser": "^1.16.1",
@@ -15,5 +19,9 @@
     "express": "^4.14.0",
     "serve-favicon": "~2.3.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ONLYOFFICE/document-builder-integration.git"
+  }
 }
