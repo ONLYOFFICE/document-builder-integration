@@ -1,5 +1,3 @@
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](http://www.gnu.org/licenses/agpl-3.0.ru.html) 
-
 ## Document Builder integration example
 
 These examples show the way to execute ONLYOFFICE Document Builder from your own website or application using one of the programming languages. The package contains examples written in .Net (C# MVC), .Net (C#), Node.js, PHP and Ruby.
