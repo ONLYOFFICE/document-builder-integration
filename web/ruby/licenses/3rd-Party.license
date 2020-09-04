@@ -1,0 +1,69 @@
+Document Builder integration example uses code from the following 3rd party projects:
+
+byebug        - Byebug is a Ruby debugger. (https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE)
+License:        BSD-2-Clause
+License File:   byebug.license
+
+coffee-rails  - CoffeeScript adapter for the Rails asset pipeline. (https://github.com/rails/coffee-rails/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   coffee-rails.license
+
+jbuilder      - Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   jbuilder.license
+
+jquery-rails  - This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application. (https://github.com/rails/jquery-rails/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   jquery-rails.license
+
+overcommit    - Utility to install, configure, and extend Git hooks (https://github.com/sds/overcommit/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   overcommit.license
+
+rails         - Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern. (https://github.com/rails/rails/blob/v6.0.3.2/MIT-LICENSE)
+License:        MIT
+License File:   rails.license
+
+rspec-rails   - rspec-rails is a testing framework for Rails 5+. (https://github.com/rspec/rspec-rails/blob/main/LICENSE.md)
+License:        MIT
+License File:   rspec-rails.license
+
+rubocop       - RuboCop is a Ruby code style checking and code formatting tool. It aims to enforce the community-driven Ruby Style Guide. (https://github.com/rubocop-hq/rubocop/blob/master/LICENSE.txt)
+License:        MIT
+License File:   rubocop.license
+
+sass-rails    - This gem provides official integration for Ruby on Rails projects with the Sass stylesheet language. (https://github.com/rails/sass-rails/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   sass-rails.license
+
+sdoc          - rdoc generator html with javascript search index. (https://github.com/zzak/sdoc/blob/master/LICENSE)
+License:        MIT
+License File:   sdoc.license
+
+spring        - Preloads your application so things like console, rake and tests run faster (https://github.com/rails/spring/blob/master/LICENSE.txt)
+License:        MIT
+License File:   spring.license
+
+sqlite3       - This module allows Ruby programs to interface with the SQLite3 database engine (www.sqlite.org). (https://github.com/sparklemotion/sqlite3-ruby/blob/master/LICENSE)
+License:        BSD-3-Clause
+License File:   sqlite3.license
+
+turbolinks    - Rails engine for Turbolinks 5 support (https://github.com/turbolinks/turbolinks-rails/blob/master/LICENSE)
+License:        MIT
+License File:   turbolinks.license
+
+tzinfo-data   - TZInfo::Data contains data from the IANA Time Zone database packaged as Ruby modules for use with TZInfo. (https://github.com/tzinfo/tzinfo-data/blob/master/LICENSE)
+License:        MIT
+License File:   tzinfo-data.license
+
+uglifier      - Uglifier minifies JavaScript files by wrapping UglifyJS to be accessible in Ruby (https://github.com/lautis/uglifier/blob/master/LICENSE.txt)
+License:        MIT
+License File:   uglifier.license
+
+uuid          - UUID generator for producing universally unique identifiers based on RFC 4122 (https://github.com/assaf/uuid/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   uuid.license
+
+web-console   - A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console/blob/master/MIT-LICENSE)
+License:        MIT
+License File:   web-console.license

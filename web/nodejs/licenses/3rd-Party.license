@@ -1,0 +1,21 @@
+Document Builder integration example uses code from the following 3rd party projects:
+
+body-parser   - Node.js body parsing middleware. (https://github.com/expressjs/body-parser/blob/master/LICENSE)
+License:        MIT
+License File:   body-parser.license
+
+config        - Node-config organizes hierarchical configurations for your app deployments. (https://github.com/lorenwest/node-config/blob/master/LICENSE)
+License:        MIT
+License File:   config.license
+
+ejs           - Embedded JavaScript templates (https://github.com/mde/ejs/blob/main/LICENSE)
+License:        Apache 2.0
+License File:   ejs.license
+
+express       - Fast, unopinionated, minimalist web framework for node. (https://github.com/mde/ejs/blob/main/LICENSE)
+License:        MIT
+License File:   express.license
+
+serve-favicon - Node.js middleware for serving a favicon. (https://github.com/expressjs/serve-favicon/blob/master/LICENSE)
+License:        MIT
+License File:   serve-favicon.license
