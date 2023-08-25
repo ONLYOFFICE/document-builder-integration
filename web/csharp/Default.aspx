@@ -8,7 +8,7 @@
 
     <!--
     *
-    * (c) Copyright Ascensio System SIA 2020
+    * (c) Copyright Ascensio System SIA 2023
     *
     * Licensed under the Apache License, Version 2.0 (the "License");
     * you may not use this file except in compliance with the License.
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <footer>&copy; Ascensio System SIA 2020. All rights reserved.</footer>
+        <footer>&copy; Ascensio System SIA 2023. All rights reserved.</footer>
     </form>
     <script src="Scripts/script.js"></script>
 </body>
