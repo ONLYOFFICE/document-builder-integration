@@ -19,7 +19,7 @@
     "express": "^4.14.0",
     "serve-favicon": "~2.3.0"
   },
-  "license": "MIT",
+  "license": "Apache",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ONLYOFFICE/document-builder-integration.git"
