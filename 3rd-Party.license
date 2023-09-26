@@ -15,6 +15,10 @@ jQuery        - jQuery is a new kind of JavaScript Library.        jQuery is a f
 License:        MIT
 License File:   jQuery.license
 
+jQuery.Migrate - Upgrading libraries such as jQuery can be a lot of work, when breaking changes have been introduced. jQuery Migrate makes this easier, by restoring the APIs that were removed, and additionally shows warnings in the browser console (development version of jQuery Migrate only) when removed and/or deprecated APIs are used. (https://github.com/jquery/jquery-migrate/blob/main/LICENSE.txt)
+License:         OpenJS
+License File:    jQuery.Migrate.license
+
 log4net       - is a tool to help the programmer output log statements to a variety of output targets. (http://logging.apache.org/log4net/license.html)
 License:        Apache 2.0
 License File:   log4net.license
