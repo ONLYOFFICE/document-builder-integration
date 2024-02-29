@@ -1,5 +1,4 @@
-﻿#!/usr/bin/env node
-var debug = require("debug")("DocumentBuilderNodeJS");
+﻿var debug = require("debug")("DocumentBuilderNodeJS");
 var app = require("../app");
 var config = require("config");
 
