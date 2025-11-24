@@ -1,0 +1,27 @@
+name: Licenses Nodejs
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master, develop]
+
+jobs:
+  licences:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Install Dependencies
+        run: npm install
+        working-directory: ./web/nodejs
+      - name: Check Licenses
+        uses: ONLYOFFICE/check-licenses@v1
+        with:
+          project_license: Apache-2.0
+          working_directory: ./web/nodejs
