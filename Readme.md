@@ -6,9 +6,9 @@ More information on how to use these examples can be found here: https://api.onl
 
 ## User Feedback and Support
 
-If you have any problems with or questions about [ONLYOFFICE Document Builder][2], please visit our official forum to find answers to your questions: [dev.onlyoffice.org][1] or you can ask and answer ONLYOFFICE development questions on [Stack Overflow][3].
+If you have any problems with or questions about [ONLYOFFICE Document Builder][2], please visit our official forum to find answers to your questions: [community.onlyoffice.com][1] or you can ask and answer ONLYOFFICE development questions on [Stack Overflow][3].
 
-  [1]: http://dev.onlyoffice.org
+  [1]: https://community.onlyoffice.com
   [2]: https://github.com/ONLYOFFICE/DocumentBuilder
   [3]: http://stackoverflow.com/questions/tagged/onlyoffice
   
